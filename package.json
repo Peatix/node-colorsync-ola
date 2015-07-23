@@ -1,0 +1,14 @@
+{
+  "name": "colorsync-ola",
+  "version": "0.0.1",
+  "description": "Control lightings as ColorSync slave via OLA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akira Sawada",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^0.7.1"
+  }
+}
