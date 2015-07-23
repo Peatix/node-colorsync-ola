@@ -1,24 +1,39 @@
-# Install
+# Requirement
 
-## Install node.js
+* node.js
+* OLA ( Open Lighting Architecture )
 
-Choose a way you may like
+## Install example for OS X Yosemite and ENTTEC Open DMX USB
 
-* via nodejs.org https://nodejs.org/download/
-* brew install nodejs
+install homebrew then
+```
+brew install node
+brew install libftdi
+brew install libftdi0
+git clone https://github.com/OpenLightingProject/ola.git
+cd ola
+autoreconf -i
+./configure
+make
+make check
+sudo make install
+cd ~/.ola
+# disable opendmx and usbserial
+olad -f
+```
 
-## clone this repository to your machine
+then, open `http://localhost:9090/` and set up devices to universe
+NOTE: don't stay in DMX Console tab. it also sending dmx signals continuously as long as it's been opened.
 
-`git clone https://github.com/Peatix/small-projects.git`
+# clone this repository to your machine
 
+`git clone https://github.com/Peatix/node-colorsync-ola`
 
-# Take info from reception screen
+# Run
 
-## Install OLA
+## Take reception info
 
-  TBD
-
-open source code view of running reception screen, and find out the lines like below
+open a source code view of running reception screen, and find out the lines like below
 
 ```
  var csc = new ColorSyncClient({
@@ -28,6 +43,8 @@ open source code view of running reception screen, and find out the lines like b
       update_checkin_progress();
     }
 ```
+
+## Run from terminal
 
 run app with the server address and token which get by the step above, and DMX Universe and addresses
 ```
