@@ -19,6 +19,8 @@ make check
 sudo make install
 cd ~/.ola
 # disable opendmx and usbserial
+## run this https://www.enttec.com/?main_menu=Products&pn=70304&show=faq
+## and then disable ~/.ola/ola-opendmx.conf and enable ~/.ola/ola-ftdidmx.conf
 olad -f
 ```
 
